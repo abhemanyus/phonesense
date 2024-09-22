@@ -21,4 +21,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 `
 
-setupAcc(document.querySelector<HTMLButtonElement>('#acc')!)
+setupAcc(document.querySelector<HTMLDivElement>('#acc')!)

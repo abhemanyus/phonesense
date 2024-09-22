@@ -2,6 +2,7 @@ export function setupAcc(element: HTMLDivElement) {
   const xSlider = slider(element);
   const ySlider = slider(element);
   const zSlider = slider(element);
+  // @ts-ignore
   const acl = new Accelerometer({ frequency: 60 });
   acl?.addEventListener("reading", () => {
     xSlider.value = acl.x;
