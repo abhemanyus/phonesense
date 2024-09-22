@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MODE: production
-      BASE_URL: ${{ steps.deployment.outputs.page_url }}
+      BASE_URL: "https://abhemanyus.github.io/phonesense"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
