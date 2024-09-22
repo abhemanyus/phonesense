@@ -32,7 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MODE: production
-      BASE_URL: "https://abhemanyus.github.io/phonesense"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,7 +45,7 @@ jobs:
           cache: 'npm'
           
       - run: npm ci
-      - run: npm run build --if-present
+      - run: npm run build --if-present --base="${{ steps.deployment.outputs.page_url }}"
       
       - name: Setup Pages
         id: pages
